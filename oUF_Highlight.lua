@@ -181,6 +181,10 @@ local function Disable(self)
 		element:Hide()
 
 		self:UnregisterEvent("UPDATE_MOUSEOVER_UNIT", Path)
+		self:UnregisterEvent("UNIT_AURA", Path)
+		self:UnregisterEvent("UNIT_THREAT_SITUATION_UPDATE", Path)
+		self:UnregisterEvent("PLAYER_TARGET_CHANGED", Path)
+		
 		self:UnregisterEvent("LEARNED_SPELL_IN_TAB", checkCurableSpells)
 		self:UnregisterEvent("PLAYER_LOGIN", checkCurableSpells)
 		self:UnregisterEvent("UNIT_PET", checkCurableSpells)
